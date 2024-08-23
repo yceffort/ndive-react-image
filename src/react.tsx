@@ -1,11 +1,12 @@
 'use client'
 
-import {useState, useCallback, CSSProperties, useMemo, memo, ImgHTMLAttributes, FC} from 'react'
+import {useState, useCallback, CSSProperties, useMemo, memo} from 'react'
 
-import {ImageFilter} from '$types'
+import {ReactImageFilterProps} from '$types'
 import {getFilter} from '$utils'
 
-export type ReactImageFilterProps = ImgHTMLAttributes<HTMLImageElement> & ImageFilter
+import type {FC} from 'react'
+
 export const ReactImageFilter: FC<ReactImageFilterProps> = memo(
     ({
         src,
