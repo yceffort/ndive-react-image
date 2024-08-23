@@ -6,7 +6,7 @@ pre-commit:
             glob: '*.{js,ts,jsx,tsx}'
             run: pnpm lint {staged_files}
         prettier:
-            glob: '*.{ts,tsx,js,mjs,cjs,jsx,json}'
+            glob: '*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'
             run: pnpm prettier {staged_files}
         markdownlint:
             glob: '*.{md}'
