@@ -4,11 +4,11 @@ pre-commit:
     commands:
         lint-staged:
             glob: '*.{js,ts,jsx,tsx}'
-            run: pnpm lint {staged_files}
+            run: pnpx lint {staged_files}
         prettier:
             glob: '*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'
-            run: pnpm prettier {staged_files}
+            run: pnpx prettier {staged_files}
         markdownlint:
             glob: '*.{md}'
-            run: pnpm md {staged_files}
+            run: pnpx md {staged_files}
 
