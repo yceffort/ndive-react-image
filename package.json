@@ -70,8 +70,8 @@
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
         "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json}'",
         "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json}'",
-        "md": "markdownlint '**/*.md'",
-        "md:fix": "markdownlint --fix '**/*.md'",
+        "md": "markdownlint '*.md'",
+        "md:fix": "markdownlint --fix '*.md'",
         "test": "vitest run"
     },
     "dependencies": {
