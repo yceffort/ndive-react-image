@@ -1,6 +1,5 @@
-import {ImgHTMLAttributes} from 'react'
-
 import type {ImageProps} from 'next/image'
+import type {ImgHTMLAttributes} from 'react'
 
 export interface ImageFilter {
     grayscale?: number
