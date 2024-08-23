@@ -10,5 +10,4 @@ pre-commit:
             run: pnpx prettier {staged_files}
         markdownlint:
             glob: '*.{md}'
-            run: pnpx md {staged_files}
-
+            run: pnpx markdownlint-cli2 {staged_files}
