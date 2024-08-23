@@ -1,3 +1,5 @@
+import {ImageFilter} from '$types'
+
 type CSSFilterValue = string
 
 interface CSSFilterProperties {
@@ -10,13 +12,7 @@ export function getFilter({
     brightness = 100,
     contrast = 100,
     blur = 0,
-}: {
-    grayscale?: number
-    sepia?: number
-    brightness?: number
-    contrast?: number
-    blur?: number
-} = {}): CSSFilterProperties {
+}: ImageFilter = {}): CSSFilterProperties {
     const filterValue: CSSFilterValue =
         `grayscale(${grayscale}%) sepia(${sepia}%) brightness(${brightness}%) contrast(${contrast}%) blur(${blur}px)`.trim()
 
