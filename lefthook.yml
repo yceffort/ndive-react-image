@@ -11,3 +11,4 @@ pre-commit:
         markdownlint:
             glob: '*.{md}'
             run: pnpm md {staged_files}
+
