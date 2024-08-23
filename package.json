@@ -68,8 +68,8 @@
         "clean": "rm -rf dist",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
-        "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json}'",
-        "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json}'",
+        "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
+        "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
         "md": "markdownlint '*.md'",
         "md:fix": "markdownlint --fix '*.md'",
         "test": "vitest run"
