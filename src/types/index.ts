@@ -11,4 +11,4 @@ export interface ImageFilter {
 
 export type ReactImageFilterProps = ImgHTMLAttributes<HTMLImageElement> & ImageFilter
 
-export type NextImageFilterProps = Omit<ImageProps, 'style'> & ImageFilter
+export type NextImageFilterProps = ImageProps & ImageFilter

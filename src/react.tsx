@@ -8,19 +8,7 @@ import {getFilter} from '$utils'
 import type {FC} from 'react'
 
 export const ReactImageFilter: FC<ReactImageFilterProps> = memo(
-    ({
-        src,
-        alt,
-        width,
-        height,
-        grayscale = 0,
-        sepia = 0,
-        brightness = 100,
-        contrast = 100,
-        blur = 0,
-        style,
-        ...props
-    }) => {
+    ({grayscale = 0, sepia = 0, brightness = 100, contrast = 100, blur = 0, ...props}) => {
         const [imageError, setImageError] = useState(false)
 
         const handleError = useCallback(() => {
@@ -38,7 +26,7 @@ export const ReactImageFilter: FC<ReactImageFilterProps> = memo(
 
         return (
             <div style={filterStyle}>
-                <img src={src} alt={alt} width={width} height={height} onError={handleError} style={style} {...props} />
+                <img onError={handleError} {...props} alt={props.alt || ''} />
             </div>
         )
     },
