@@ -51,7 +51,7 @@ jobs:
                   publish: pnpm release
                   commit: '🚀 update versions'
                   title: '📦 update versions'
-                  version: pnpm changeset version && pnpm run prettier:fix
+                  version: pnpm changeset-version
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -73,7 +73,10 @@
         "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
         "md": "markdownlint '*.md'",
         "md:fix": "markdownlint --fix '*.md'",
-        "test": "vitest run"
+        "test": "vitest run",
+        "changeset-add": "changeset add",
+        "changeset-status": "changeset status --verbose",
+        "changeset-version": "changeset version && pnpm run prettier:fix"
     },
     "dependencies": {
         "@babel/runtime-corejs3": "^7.25.0"
