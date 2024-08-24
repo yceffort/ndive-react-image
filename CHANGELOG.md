@@ -1,5 +1,12 @@
 # @ndive/react-image
 
+## 0.1.5
+
+### Patch Changes
+
+- 34640c8: - 내부 타입을 보다 효율적으로 개선하였습니다.
+  - `img` 요소에 props를 모두 넘깁니다.
+
 ## 0.1.4
 
 ### Patch Changes
