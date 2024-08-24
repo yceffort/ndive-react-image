@@ -62,6 +62,7 @@
         "dist"
     ],
     "scripts": {
+        "prepare": "lefthook install -f",
         "build": "pnpm run clean && vite build --config vite.config.mts",
         "build:swc": "pnpm run clean && vite build --config vite-swc.config.mts",
         "release": "changeset publish",
@@ -118,6 +119,11 @@
     "peerDependenciesMeta": {
         "next": {
             "optional": true
+        }
+    },
+    "pnpm": {
+        "overrides": {
+            "prettier": "^3.3.3"
         }
     },
     "packageManager": "pnpm@9.7.0",
