@@ -95,7 +95,6 @@
         "@vitejs/plugin-react": "^4.3.1",
         "@vitejs/plugin-react-swc": "^3.7.0",
         "browserslist-to-esbuild": "^2.1.1",
-        "jest": "^29.7.0",
         "lefthook": "^1.7.14",
         "next": "^14.1.1",
         "react": "^18.3.1",
