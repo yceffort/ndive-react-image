@@ -69,13 +69,10 @@
         "clean": "rm -rf dist",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
-        "lint:staged": "eslint",
         "prettier": "prettier --check '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
         "prettier:fix": "prettier --write '**/*.{ts,tsx,js,mjs,cjs,jsx,json,yaml,yml}'",
-        "prettier:staged": "prettier --check",
         "md": "markdownlint '*.md'",
         "md:fix": "markdownlint --fix '*.md'",
-        "md:staged": "markdownlint-cli2",
         "test": "vitest run"
     },
     "dependencies": {
