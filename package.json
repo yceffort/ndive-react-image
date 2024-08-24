@@ -76,7 +76,7 @@
         "test": "vitest run",
         "changeset-add": "changeset add",
         "changeset-status": "changeset status --verbose",
-        "changeset-version": "changeset version && pnpm run prettier:fix"
+        "changeset-version": "changeset version && pnpm run md:fix"
     },
     "dependencies": {
         "@babel/runtime-corejs3": "^7.25.0"
