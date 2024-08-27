@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest'
 
-import {getFilter} from './index' // 실제 파일 이름으로 변경해주세요
+import {getFilter} from './index'
 
 describe('getFilter function', () => {
     it('should return default values when no parameters are provided', () => {
