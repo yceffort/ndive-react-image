@@ -8,24 +8,24 @@
     "types": "./dist/cjs/index.d.ts",
     "exports": {
         ".": {
+            "types": "./dist/types/index.d.ts",
             "import": "./dist/esm/index.mjs",
-            "require": "./dist/cjs/index.js",
-            "types": "./dist/types/index.d.ts"
+            "require": "./dist/cjs/index.js"
         },
         "./react": {
+            "types": "./dist/types/react.d.ts",
             "import": "./dist/esm/react.mjs",
-            "require": "./dist/cjs/react.js",
-            "types": "./dist/types/react.d.ts"
+            "require": "./dist/cjs/react.js"
         },
         "./next": {
+            "types": "./dist/types/next.d.ts",
             "import": "./dist/esm/next.mjs",
-            "require": "./dist/cjs/next.js",
-            "types": "./dist/types/next.d.ts"
+            "require": "./dist/cjs/next.js"
         },
         "./utils": {
+            "types": "./dist/types/utils.d.ts",
             "import": "./dist/esm/utils.mjs",
-            "require": "./dist/cjs/utils.js",
-            "types": "./dist/types/utils.d.ts"
+            "require": "./dist/cjs/utils.js"
         }
     },
     "keywords": [
