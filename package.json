@@ -63,9 +63,9 @@
     ],
     "scripts": {
         "prepare": "lefthook install -f",
-        "build": "pnpm run clean && vite build --config vite.config.mts",
-        "build:swc": "pnpm run clean && vite build --config vite-swc.config.mts",
+        "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
         "release": "changeset publish",
+        "build:dts": "tsup --config tsup.config.mts",
         "clean": "rm -rf dist",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
@@ -83,7 +83,6 @@
     },
     "devDependencies": {
         "@babel/plugin-transform-runtime": "^7.24.7",
-        "@babel/preset-env": "^7.25.3",
         "@changesets/cli": "^2.27.7",
         "@naverpay/editorconfig": "^0.0.4",
         "@naverpay/eslint-config": "^1.0.7",
@@ -101,6 +100,7 @@
         "rollup": "^4.20.0",
         "rollup-preserve-directives": "^1.1.1",
         "terser": "^5.31.6",
+        "tsup": "^8.2.4",
         "typescript": "^5.5.4",
         "vite": "^5.4.0",
         "vite-plugin-dts": "^4.0.2",
