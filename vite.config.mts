@@ -1,17 +1,12 @@
-import {resolve, dirname} from 'node:path'
-import {fileURLToPath} from 'node:url'
-
 import {babel} from '@rollup/plugin-babel'
 import react from '@vitejs/plugin-react'
+// import react from '@vitejs/plugin-react-swc'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
 import preserveDirectives from 'rollup-preserve-directives'
 import {defineConfig} from 'vite'
-import dts from 'vite-plugin-dts'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 import pkg from './package.json'
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const SUPPORT_TARGETS = browserslistToEsbuild()
 
@@ -19,20 +14,8 @@ export default defineConfig({
     plugins: [
         react(),
         tsconfigPaths(),
-        dts({
-            outDir: 'dist/types',
-            rollupTypes: true,
-        }),
         babel({
             babelHelpers: 'runtime',
-            presets: [
-                [
-                    '@babel/preset-env',
-                    {
-                        debug: true,
-                    },
-                ],
-            ],
             plugins: [
                 [
                     '@babel/plugin-transform-runtime',
@@ -50,10 +33,10 @@ export default defineConfig({
         sourcemap: true,
         lib: {
             entry: {
-                index: resolve(__dirname, './src/index.ts'),
-                react: resolve(__dirname, './src/react.tsx'),
-                next: resolve(__dirname, './src/next.tsx'),
-                utils: resolve(__dirname, './src/utils/index.ts'),
+                index: './src/index.ts',
+                react: './src/react.tsx',
+                next: './src/next.tsx',
+                utils: './src/utils/index.ts',
             },
         },
         rollupOptions: {
