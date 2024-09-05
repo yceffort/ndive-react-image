@@ -1,18 +1,20 @@
-import {defineConfig, Format} from 'tsup'
+import {defineConfig} from 'tsup'
 
-const entries = {
+import type {Format, Options} from 'tsup'
+
+const entries: Options['entry'] = {
     index: './src/index.ts',
     react: './src/react.tsx',
     next: './src/next.tsx',
     utils: './src/utils/index.ts',
     types: './src/types/index.ts',
-}
+} as const
 
-const sharedConfig = {
+const sharedConfig: Options = {
     entry: entries,
     dts: {only: true},
     minify: true,
-}
+} as const
 
 const createConfig = (format: Exclude<Format, 'iife'>) =>
     defineConfig({
