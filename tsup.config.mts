@@ -13,7 +13,6 @@ const entries: Options['entry'] = {
 const sharedConfig: Options = {
     entry: entries,
     dts: {only: true},
-    minify: true,
 } as const
 
 const createConfig = (format: Exclude<Format, 'iife'>) =>
