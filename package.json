@@ -8,24 +8,44 @@
     "types": "./dist/cjs/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/esm/index.mjs",
-            "require": "./dist/cjs/index.js",
-            "types": "./dist/types/index.d.ts"
+            "import": {
+                "types": "./dist/esm/index.d.mts",
+                "default": "./dist/esm/index.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/index.d.ts",
+                "default": "./dist/cjs/index.js"
+            }
         },
         "./react": {
-            "import": "./dist/esm/react.mjs",
-            "require": "./dist/cjs/react.js",
-            "types": "./dist/types/react.d.ts"
+            "import": {
+                "types": "./dist/esm/react.d.mts",
+                "default": "./dist/esm/react.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/react.d.ts",
+                "default": "./dist/cjs/react.js"
+            }
         },
         "./next": {
-            "import": "./dist/esm/next.mjs",
-            "require": "./dist/cjs/next.js",
-            "types": "./dist/types/next.d.ts"
+            "import": {
+                "types": "./dist/esm/next.d.mts",
+                "default": "./dist/esm/next.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/next.d.ts",
+                "default": "./dist/cjs/next.js"
+            }
         },
         "./utils": {
-            "import": "./dist/esm/utils.mjs",
-            "require": "./dist/cjs/utils.js",
-            "types": "./dist/types/utils.d.ts"
+            "import": {
+                "types": "./dist/esm/utils.d.mts",
+                "default": "./dist/esm/utils.mjs"
+            },
+            "require": {
+                "types": "./dist/cjs/utils.d.ts",
+                "default": "./dist/cjs/utils.js"
+            }
         }
     },
     "keywords": [
@@ -63,9 +83,9 @@
     ],
     "scripts": {
         "prepare": "lefthook install -f",
-        "build": "pnpm run clean && vite build --config vite.config.mts",
-        "build:swc": "pnpm run clean && vite build --config vite-swc.config.mts",
+        "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
         "release": "changeset publish",
+        "build:dts": "tsup --config tsup.config.mts",
         "clean": "rm -rf dist",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
@@ -82,8 +102,7 @@
         "@babel/runtime-corejs3": "^7.25.0"
     },
     "devDependencies": {
-        "@babel/plugin-transform-runtime": "^7.24.7",
-        "@babel/preset-env": "^7.25.3",
+        "@babel/plugin-transform-runtime": "^7.25.4",
         "@changesets/cli": "^2.27.7",
         "@naverpay/editorconfig": "^0.0.4",
         "@naverpay/eslint-config": "^1.0.7",
@@ -101,6 +120,7 @@
         "rollup": "^4.20.0",
         "rollup-preserve-directives": "^1.1.1",
         "terser": "^5.31.6",
+        "tsup": "^8.2.4",
         "typescript": "^5.5.4",
         "vite": "^5.4.0",
         "vite-plugin-dts": "^4.0.2",
