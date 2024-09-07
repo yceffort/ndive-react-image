@@ -30,7 +30,6 @@ export default defineConfig({
     ],
     build: {
         outDir: 'dist',
-        sourcemap: true,
         lib: {
             entry: {
                 index: './src/index.ts',
