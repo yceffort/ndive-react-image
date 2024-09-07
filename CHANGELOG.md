@@ -1,5 +1,11 @@
 # @ndive/react-image
 
+## 0.1.6
+
+### Patch Changes
+
+- 2d87104: Modify the exports map in `the package.json` in more detail.
+
 ## 0.1.5
 
 ### Patch Changes
