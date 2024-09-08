@@ -1,5 +1,11 @@
 # @ndive/react-image
 
+## 0.1.7
+
+### Patch Changes
+
+- 68037e8: :fire: remove useless sourcemap
+
 ## 0.1.6
 
 ### Patch Changes
