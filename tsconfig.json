@@ -5,7 +5,6 @@
         "module": "ESNext",
         "lib": ["ESNext", "dom"],
         "declaration": true,
-        "sourceMap": true,
         "rootDir": "./src",
         "strict": true,
         "moduleResolution": "Bundler",
