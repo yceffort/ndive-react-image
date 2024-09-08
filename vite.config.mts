@@ -14,6 +14,7 @@ export default defineConfig({
     plugins: [
         react(),
         tsconfigPaths(),
+        preserveDirectives(),
         babel({
             babelHelpers: 'runtime',
             plugins: [
@@ -53,7 +54,6 @@ export default defineConfig({
                     dir: 'dist/cjs',
                 },
             ],
-            plugins: [preserveDirectives()],
         },
         minify: 'terser', // or 'esbuild'
         target: SUPPORT_TARGETS,
