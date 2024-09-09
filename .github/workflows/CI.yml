@@ -1,4 +1,4 @@
-name: Build and Lint @ndive-react-image
+name: CI
 
 on:
     push:
