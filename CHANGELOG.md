@@ -1,5 +1,13 @@
 # @ndive/react-image
 
+## 0.1.9
+
+### Patch Changes
+
+- 161708d: 📦 패키지 종속성 정리
+
+  - `dependencies`로 사용하고 있는 `@babel/runtime-corejs3`의 버전을 업데이트 합니다.
+
 ## 0.1.8
 
 ### Patch Changes
