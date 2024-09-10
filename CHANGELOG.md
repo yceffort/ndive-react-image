@@ -1,5 +1,11 @@
 # @ndive/react-image
 
+## 0.1.8
+
+### Patch Changes
+
+- 67329fb: :fire: 미사용 스크립트 제거
+
 ## 0.1.7
 
 ### Patch Changes
