@@ -17,10 +17,6 @@ jobs:
               with:
                   node-version: '20'
                   cache: 'pnpm'
-
-            - name: Enable Corepack
-              run: corepack enable
-
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
@@ -34,8 +30,9 @@ jobs:
               with:
                   node-version: '20'
                   cache: 'pnpm'
-            - name: Enable Corepack
-              run: corepack enable
+
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
             - name: Build
               run: pnpm run build
             - name: Test
@@ -51,8 +48,8 @@ jobs:
               with:
                   node-version: '20'
                   cache: 'pnpm'
-            - name: Enable Corepack
-              run: corepack enable
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
             - name: Lint
               run: pnpm run lint
             - name: Prettier
