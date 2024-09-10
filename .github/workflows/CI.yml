@@ -16,25 +16,13 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: '20'
+                  cache: 'pnpm'
 
             - name: Enable Corepack
               run: corepack enable
 
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
-
-            - name: Get pnpm store directory
-              id: pnpm-cache
-              run: |
-                  echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-            - name: Cache pnpm store
-              uses: actions/cache@v4
-              with:
-                  path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-                  key: ${{ runner.OS }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-                  restore-keys: |
-                      ${{ runner.OS }}-pnpm-store-
 
     build:
         needs: setup
@@ -44,13 +32,9 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: '20'
+                  cache: 'pnpm'
             - name: Enable Corepack
               run: corepack enable
-            - name: Restore cached dependencies
-              uses: actions/cache@v4
-              with:
-                  path: ./node_modules
-                  key: ${{ runner.OS }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
             - name: Build
               run: pnpm run build
             - name: Test
@@ -64,13 +48,9 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: '20'
+                  cache: 'pnpm'
             - name: Enable Corepack
               run: corepack enable
-            - name: Restore cached dependencies
-              uses: actions/cache@v4
-              with:
-                  path: ./node_modules
-                  key: ${{ runner.OS }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
             - name: Lint
               run: pnpm run lint
             - name: Prettier
