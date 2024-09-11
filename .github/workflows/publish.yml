@@ -4,12 +4,10 @@ on:
         branches:
             - main
 
-env:
-    CI: true
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-    version:
-        timeout-minutes: 15
+    release:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4

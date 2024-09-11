@@ -55,7 +55,6 @@ export default defineConfig({
                 },
             ],
         },
-        minify: 'terser', // or 'esbuild'
         target: SUPPORT_TARGETS,
     },
 })
