@@ -1,41 +1,41 @@
-import {describe, it, expect} from 'vitest'
+import {describe, test, expect} from 'vitest'
 
 import {getFilter} from './index'
 
 describe('getFilter function', () => {
-    it('should return default values when no parameters are provided', () => {
+    test('should return default values when no parameters are provided', () => {
         const result = getFilter()
         expect(result).toEqual({
             filter: 'grayscale(0%) sepia(0%) brightness(100%) contrast(100%) blur(0px)',
         })
     })
 
-    it('should apply grayscale correctly', () => {
+    test('should apply grayscale correctly', () => {
         const result = getFilter({grayscale: 50})
         expect(result.filter).toContain('grayscale(50%)')
     })
 
-    it('should apply sepia correctly', () => {
+    test('should apply sepia correctly', () => {
         const result = getFilter({sepia: 75})
         expect(result.filter).toContain('sepia(75%)')
     })
 
-    it('should apply brightness correctly', () => {
+    test('should apply brightness correctly', () => {
         const result = getFilter({brightness: 150})
         expect(result.filter).toContain('brightness(150%)')
     })
 
-    it('should apply contrast correctly', () => {
+    test('should apply contrast correctly', () => {
         const result = getFilter({contrast: 200})
         expect(result.filter).toContain('contrast(200%)')
     })
 
-    it('should apply blur correctly', () => {
+    test('should apply blur correctly', () => {
         const result = getFilter({blur: 5})
         expect(result.filter).toContain('blur(5px)')
     })
 
-    it('should apply multiple filters correctly', () => {
+    test('should apply multiple filters correctly', () => {
         const result = getFilter({
             grayscale: 30,
             sepia: 20,
@@ -48,7 +48,7 @@ describe('getFilter function', () => {
         })
     })
 
-    it('should maintain order of filters', () => {
+    test('should maintain order of filters', () => {
         const result = getFilter({
             blur: 3,
             grayscale: 40,
