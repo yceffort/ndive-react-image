@@ -1,5 +1,14 @@
 # @ndive/react-image
 
+## 0.1.10
+
+### Patch Changes
+
+- 7f738b7: ⬆️ Bump rollup from 4.20.0 to 4.22.4
+- bd0afa1: :fire: 어거지로 폴리필 넣는거 제거
+- 289a01b: 폴리필이 의도대로 추가되지 않던 문제 수정합니다.
+- 3eee580: ⬆️ Bump vite from 5.4.3 to 5.4.6
+
 ## 0.1.9
 
 ### Patch Changes
