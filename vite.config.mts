@@ -24,7 +24,6 @@ export default defineConfig({
                         corejs: {version: 3, proposals: true},
                     },
                 ],
-                ['polyfill-corejs3', {method: 'usage-pure', version: '3.38'}],
             ],
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
             exclude: 'node_modules/**',
