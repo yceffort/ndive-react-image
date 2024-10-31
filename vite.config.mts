@@ -18,10 +18,13 @@ export default defineConfig({
         babel({
             babelHelpers: 'runtime',
             plugins: [
+                ['@babel/plugin-transform-runtime'],
                 [
-                    '@babel/plugin-transform-runtime',
+                    'babel-plugin-polyfill-corejs3',
                     {
-                        corejs: {version: 3, proposals: true},
+                        method: 'usage-pure',
+                        version: '3.38.1',
+                        proposals: true,
                     },
                 ],
             ],
