@@ -13,9 +13,11 @@ export function getFilter({grayscale = 0, sepia = 0, brightness = 100, contrast 
     }
 }
 
-export function stringMatchAll(str: string, regexp: RegExp) {
-    return Array.from(str.matchAll(regexp))
-}
+// polyfill examples
+
+// export function stringMatchAll(str: string, regexp: RegExp) {
+//     return Array.from(str.matchAll(regexp))
+// }
 
 // export function at<T>(arr: T[], index: number): T | undefined {
 //     return arr.at(index)
