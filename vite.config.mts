@@ -23,7 +23,7 @@ export default defineConfig({
                     'babel-plugin-polyfill-corejs3',
                     {
                         method: 'usage-pure',
-                        version: pkg.dependencies['core-js'],
+                        version: pkg.dependencies['core-js-pure'],
                         proposals: true,
                     },
                 ],
