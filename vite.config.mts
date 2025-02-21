@@ -25,6 +25,12 @@ export default defineConfig({
                         method: 'usage-pure',
                         version: pkg.dependencies['core-js-pure'],
                         proposals: true,
+                        shouldInjectPolyfill: (polyfillName: string) => {
+                            if (polyfillName === 'esnext.json.parse' || polyfillName === 'es.string.trim') {
+                                return false
+                            }
+                            return true
+                        },
                     },
                 ],
             ],
